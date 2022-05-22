@@ -1,0 +1,1686 @@
+%General Mission Analysis Tool(GMAT) Script
+%Created: 2022-04-27 20:07:47
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE1;
+GMAT HSEYE1.DateFormat = UTCGregorian;
+GMAT HSEYE1.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE1.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE1.DisplayStateType = Keplerian;
+GMAT HSEYE1.SMA = 6828.100000000009;
+GMAT HSEYE1.ECC = 1.743337006900928e-17;
+GMAT HSEYE1.INC = 50;
+GMAT HSEYE1.RAAN = 0;
+GMAT HSEYE1.AOP = 0;
+GMAT HSEYE1.TA = 350;
+GMAT HSEYE1.DryMass = 12;
+GMAT HSEYE1.Cd = 2.2;
+GMAT HSEYE1.Cr = 1;
+GMAT HSEYE1.DragArea = 0.03;
+GMAT HSEYE1.SRPArea = 0.06;
+GMAT HSEYE1.SPADDragScaleFactor = 1;
+GMAT HSEYE1.SPADSRPScaleFactor = 1;
+GMAT HSEYE1.NAIFId = -10002001;
+GMAT HSEYE1.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE1.OrbitColor = Red;
+GMAT HSEYE1.TargetColor = Teal;
+GMAT HSEYE1.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE1.CdSigma = 1e+70;
+GMAT HSEYE1.CrSigma = 1e+70;
+GMAT HSEYE1.Id = 'SatId';
+GMAT HSEYE1.Attitude = NadirPointing;
+GMAT HSEYE1.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE1.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE1.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE1.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE1.ModelFile = 'aura.3ds';
+GMAT HSEYE1.ModelOffsetX = 0;
+GMAT HSEYE1.ModelOffsetY = 0;
+GMAT HSEYE1.ModelOffsetZ = 0;
+GMAT HSEYE1.ModelRotationX = 0;
+GMAT HSEYE1.ModelRotationY = 0;
+GMAT HSEYE1.ModelRotationZ = 0;
+GMAT HSEYE1.ModelScale = 1;
+GMAT HSEYE1.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE1.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE1.EulerAngleSequence = '321';
+GMAT HSEYE1.AttitudeReferenceBody = Earth;
+GMAT HSEYE1.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE1.BodyAlignmentVectorX = 1;
+GMAT HSEYE1.BodyAlignmentVectorY = 1;
+GMAT HSEYE1.BodyAlignmentVectorZ = 0;
+GMAT HSEYE1.BodyConstraintVectorX = 0;
+GMAT HSEYE1.BodyConstraintVectorY = 0;
+GMAT HSEYE1.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE2;
+GMAT HSEYE2.DateFormat = UTCGregorian;
+GMAT HSEYE2.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE2.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE2.DisplayStateType = Keplerian;
+GMAT HSEYE2.SMA = 6828.100000000007;
+GMAT HSEYE2.ECC = 8.520317499449475e-16;
+GMAT HSEYE2.INC = 50.00000000000001;
+GMAT HSEYE2.RAAN = 19.99999999999999;
+GMAT HSEYE2.AOP = 0;
+GMAT HSEYE2.TA = 360;
+GMAT HSEYE2.DryMass = 12;
+GMAT HSEYE2.Cd = 2.2;
+GMAT HSEYE2.Cr = 1;
+GMAT HSEYE2.DragArea = 0.03;
+GMAT HSEYE2.SRPArea = 0.06;
+GMAT HSEYE2.SPADDragScaleFactor = 1;
+GMAT HSEYE2.SPADSRPScaleFactor = 1;
+GMAT HSEYE2.NAIFId = -10002001;
+GMAT HSEYE2.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE2.OrbitColor = Red;
+GMAT HSEYE2.TargetColor = Teal;
+GMAT HSEYE2.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE2.CdSigma = 1e+70;
+GMAT HSEYE2.CrSigma = 1e+70;
+GMAT HSEYE2.Id = 'SatId';
+GMAT HSEYE2.Attitude = NadirPointing;
+GMAT HSEYE2.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE2.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE2.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE2.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE2.ModelFile = 'aura.3ds';
+GMAT HSEYE2.ModelOffsetX = 0;
+GMAT HSEYE2.ModelOffsetY = 0;
+GMAT HSEYE2.ModelOffsetZ = 0;
+GMAT HSEYE2.ModelRotationX = 0;
+GMAT HSEYE2.ModelRotationY = 0;
+GMAT HSEYE2.ModelRotationZ = 0;
+GMAT HSEYE2.ModelScale = 1;
+GMAT HSEYE2.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE2.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE2.EulerAngleSequence = '321';
+GMAT HSEYE2.AttitudeReferenceBody = Earth;
+GMAT HSEYE2.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE2.BodyAlignmentVectorX = 1;
+GMAT HSEYE2.BodyAlignmentVectorY = 1;
+GMAT HSEYE2.BodyAlignmentVectorZ = 0;
+GMAT HSEYE2.BodyConstraintVectorX = 0;
+GMAT HSEYE2.BodyConstraintVectorY = 0;
+GMAT HSEYE2.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE3;
+GMAT HSEYE3.DateFormat = UTCGregorian;
+GMAT HSEYE3.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE3.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE3.DisplayStateType = Keplerian;
+GMAT HSEYE3.SMA = 6828.100000000008;
+GMAT HSEYE3.ECC = 9.862982039762832e-16;
+GMAT HSEYE3.INC = 50;
+GMAT HSEYE3.RAAN = 40.00000000000001;
+GMAT HSEYE3.AOP = 0;
+GMAT HSEYE3.TA = 9.999999999999867;
+GMAT HSEYE3.DryMass = 12;
+GMAT HSEYE3.Cd = 2.2;
+GMAT HSEYE3.Cr = 1;
+GMAT HSEYE3.DragArea = 0.03;
+GMAT HSEYE3.SRPArea = 0.06;
+GMAT HSEYE3.SPADDragScaleFactor = 1;
+GMAT HSEYE3.SPADSRPScaleFactor = 1;
+GMAT HSEYE3.NAIFId = -10002001;
+GMAT HSEYE3.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE3.OrbitColor = Red;
+GMAT HSEYE3.TargetColor = Teal;
+GMAT HSEYE3.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE3.CdSigma = 1e+70;
+GMAT HSEYE3.CrSigma = 1e+70;
+GMAT HSEYE3.Id = 'SatId';
+GMAT HSEYE3.Attitude = NadirPointing;
+GMAT HSEYE3.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE3.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE3.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE3.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE3.ModelFile = 'aura.3ds';
+GMAT HSEYE3.ModelOffsetX = 0;
+GMAT HSEYE3.ModelOffsetY = 0;
+GMAT HSEYE3.ModelOffsetZ = 0;
+GMAT HSEYE3.ModelRotationX = 0;
+GMAT HSEYE3.ModelRotationY = 0;
+GMAT HSEYE3.ModelRotationZ = 0;
+GMAT HSEYE3.ModelScale = 1;
+GMAT HSEYE3.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE3.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE3.EulerAngleSequence = '321';
+GMAT HSEYE3.AttitudeReferenceBody = Earth;
+GMAT HSEYE3.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE3.BodyAlignmentVectorX = 1;
+GMAT HSEYE3.BodyAlignmentVectorY = 1;
+GMAT HSEYE3.BodyAlignmentVectorZ = 0;
+GMAT HSEYE3.BodyConstraintVectorX = 0;
+GMAT HSEYE3.BodyConstraintVectorY = 0;
+GMAT HSEYE3.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE4;
+GMAT HSEYE4.DateFormat = UTCGregorian;
+GMAT HSEYE4.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE4.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE4.DisplayStateType = Keplerian;
+GMAT HSEYE4.SMA = 6828.100000000003;
+GMAT HSEYE4.ECC = 9.343652194381146e-16;
+GMAT HSEYE4.INC = 49.99999999999999;
+GMAT HSEYE4.RAAN = 59.99999999999999;
+GMAT HSEYE4.AOP = 0;
+GMAT HSEYE4.TA = 19.99999999999992;
+GMAT HSEYE4.DryMass = 12;
+GMAT HSEYE4.Cd = 2.2;
+GMAT HSEYE4.Cr = 1;
+GMAT HSEYE4.DragArea = 0.03;
+GMAT HSEYE4.SRPArea = 0.06;
+GMAT HSEYE4.SPADDragScaleFactor = 1;
+GMAT HSEYE4.SPADSRPScaleFactor = 1;
+GMAT HSEYE4.NAIFId = -10002001;
+GMAT HSEYE4.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE4.OrbitColor = Red;
+GMAT HSEYE4.TargetColor = Teal;
+GMAT HSEYE4.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE4.CdSigma = 1e+70;
+GMAT HSEYE4.CrSigma = 1e+70;
+GMAT HSEYE4.Id = 'SatId';
+GMAT HSEYE4.Attitude = NadirPointing;
+GMAT HSEYE4.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE4.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE4.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE4.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE4.ModelFile = 'aura.3ds';
+GMAT HSEYE4.ModelOffsetX = 0;
+GMAT HSEYE4.ModelOffsetY = 0;
+GMAT HSEYE4.ModelOffsetZ = 0;
+GMAT HSEYE4.ModelRotationX = 0;
+GMAT HSEYE4.ModelRotationY = 0;
+GMAT HSEYE4.ModelRotationZ = 0;
+GMAT HSEYE4.ModelScale = 1;
+GMAT HSEYE4.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE4.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE4.EulerAngleSequence = '321';
+GMAT HSEYE4.AttitudeReferenceBody = Earth;
+GMAT HSEYE4.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE4.BodyAlignmentVectorX = 1;
+GMAT HSEYE4.BodyAlignmentVectorY = 1;
+GMAT HSEYE4.BodyAlignmentVectorZ = 0;
+GMAT HSEYE4.BodyConstraintVectorX = 0;
+GMAT HSEYE4.BodyConstraintVectorY = 0;
+GMAT HSEYE4.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE5;
+GMAT HSEYE5.DateFormat = UTCGregorian;
+GMAT HSEYE5.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE5.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE5.DisplayStateType = Keplerian;
+GMAT HSEYE5.SMA = 6828.100000000003;
+GMAT HSEYE5.ECC = 1.509603587145128e-15;
+GMAT HSEYE5.INC = 49.99999999999998;
+GMAT HSEYE5.RAAN = 80;
+GMAT HSEYE5.AOP = 0;
+GMAT HSEYE5.TA = 29.99999999999995;
+GMAT HSEYE5.DryMass = 12;
+GMAT HSEYE5.Cd = 2.2;
+GMAT HSEYE5.Cr = 1;
+GMAT HSEYE5.DragArea = 0.03;
+GMAT HSEYE5.SRPArea = 0.06;
+GMAT HSEYE5.SPADDragScaleFactor = 1;
+GMAT HSEYE5.SPADSRPScaleFactor = 1;
+GMAT HSEYE5.NAIFId = -10002001;
+GMAT HSEYE5.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE5.OrbitColor = Red;
+GMAT HSEYE5.TargetColor = Teal;
+GMAT HSEYE5.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE5.CdSigma = 1e+70;
+GMAT HSEYE5.CrSigma = 1e+70;
+GMAT HSEYE5.Id = 'SatId';
+GMAT HSEYE5.Attitude = NadirPointing;
+GMAT HSEYE5.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE5.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE5.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE5.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE5.ModelFile = 'aura.3ds';
+GMAT HSEYE5.ModelOffsetX = 0;
+GMAT HSEYE5.ModelOffsetY = 0;
+GMAT HSEYE5.ModelOffsetZ = 0;
+GMAT HSEYE5.ModelRotationX = 0;
+GMAT HSEYE5.ModelRotationY = 0;
+GMAT HSEYE5.ModelRotationZ = 0;
+GMAT HSEYE5.ModelScale = 1;
+GMAT HSEYE5.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE5.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE5.EulerAngleSequence = '321';
+GMAT HSEYE5.AttitudeReferenceBody = Earth;
+GMAT HSEYE5.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE5.BodyAlignmentVectorX = 1;
+GMAT HSEYE5.BodyAlignmentVectorY = 1;
+GMAT HSEYE5.BodyAlignmentVectorZ = 0;
+GMAT HSEYE5.BodyConstraintVectorX = 0;
+GMAT HSEYE5.BodyConstraintVectorY = 0;
+GMAT HSEYE5.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE6;
+GMAT HSEYE6.DateFormat = UTCGregorian;
+GMAT HSEYE6.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE6.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE6.DisplayStateType = Keplerian;
+GMAT HSEYE6.SMA = 6828.099999999997;
+GMAT HSEYE6.ECC = 1.521670405054008e-15;
+GMAT HSEYE6.INC = 50;
+GMAT HSEYE6.RAAN = 100;
+GMAT HSEYE6.AOP = 0;
+GMAT HSEYE6.TA = 55.00000000000006;
+GMAT HSEYE6.DryMass = 12;
+GMAT HSEYE6.Cd = 2.2;
+GMAT HSEYE6.Cr = 1;
+GMAT HSEYE6.DragArea = 0.03;
+GMAT HSEYE6.SRPArea = 0.06;
+GMAT HSEYE6.SPADDragScaleFactor = 1;
+GMAT HSEYE6.SPADSRPScaleFactor = 1;
+GMAT HSEYE6.NAIFId = -10002001;
+GMAT HSEYE6.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE6.OrbitColor = Red;
+GMAT HSEYE6.TargetColor = Teal;
+GMAT HSEYE6.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE6.CdSigma = 1e+70;
+GMAT HSEYE6.CrSigma = 1e+70;
+GMAT HSEYE6.Id = 'SatId';
+GMAT HSEYE6.Attitude = NadirPointing;
+GMAT HSEYE6.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE6.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE6.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE6.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE6.ModelFile = 'aura.3ds';
+GMAT HSEYE6.ModelOffsetX = 0;
+GMAT HSEYE6.ModelOffsetY = 0;
+GMAT HSEYE6.ModelOffsetZ = 0;
+GMAT HSEYE6.ModelRotationX = 0;
+GMAT HSEYE6.ModelRotationY = 0;
+GMAT HSEYE6.ModelRotationZ = 0;
+GMAT HSEYE6.ModelScale = 1;
+GMAT HSEYE6.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE6.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE6.EulerAngleSequence = '321';
+GMAT HSEYE6.AttitudeReferenceBody = Earth;
+GMAT HSEYE6.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE6.BodyAlignmentVectorX = 1;
+GMAT HSEYE6.BodyAlignmentVectorY = 1;
+GMAT HSEYE6.BodyAlignmentVectorZ = 0;
+GMAT HSEYE6.BodyConstraintVectorX = 0;
+GMAT HSEYE6.BodyConstraintVectorY = 0;
+GMAT HSEYE6.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE7;
+GMAT HSEYE7.DateFormat = UTCGregorian;
+GMAT HSEYE7.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE7.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE7.DisplayStateType = Keplerian;
+GMAT HSEYE7.SMA = 6828.099999999995;
+GMAT HSEYE7.ECC = 1.29579864134506e-15;
+GMAT HSEYE7.INC = 50.00000000000001;
+GMAT HSEYE7.RAAN = 120;
+GMAT HSEYE7.AOP = 0;
+GMAT HSEYE7.TA = 65;
+GMAT HSEYE7.DryMass = 12;
+GMAT HSEYE7.Cd = 2.2;
+GMAT HSEYE7.Cr = 1;
+GMAT HSEYE7.DragArea = 0.03;
+GMAT HSEYE7.SRPArea = 0.06;
+GMAT HSEYE7.SPADDragScaleFactor = 1;
+GMAT HSEYE7.SPADSRPScaleFactor = 1;
+GMAT HSEYE7.NAIFId = -10002001;
+GMAT HSEYE7.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE7.OrbitColor = [0 128 255];
+GMAT HSEYE7.TargetColor = Teal;
+GMAT HSEYE7.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE7.CdSigma = 1e+70;
+GMAT HSEYE7.CrSigma = 1e+70;
+GMAT HSEYE7.Id = 'SatId';
+GMAT HSEYE7.Attitude = NadirPointing;
+GMAT HSEYE7.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE7.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE7.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE7.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE7.ModelFile = 'aura.3ds';
+GMAT HSEYE7.ModelOffsetX = 0;
+GMAT HSEYE7.ModelOffsetY = 0;
+GMAT HSEYE7.ModelOffsetZ = 0;
+GMAT HSEYE7.ModelRotationX = 0;
+GMAT HSEYE7.ModelRotationY = 0;
+GMAT HSEYE7.ModelRotationZ = 0;
+GMAT HSEYE7.ModelScale = 1;
+GMAT HSEYE7.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE7.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE7.EulerAngleSequence = '321';
+GMAT HSEYE7.AttitudeReferenceBody = Earth;
+GMAT HSEYE7.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE7.BodyAlignmentVectorX = 1;
+GMAT HSEYE7.BodyAlignmentVectorY = 1;
+GMAT HSEYE7.BodyAlignmentVectorZ = 0;
+GMAT HSEYE7.BodyConstraintVectorX = 0;
+GMAT HSEYE7.BodyConstraintVectorY = 0;
+GMAT HSEYE7.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE8;
+GMAT HSEYE8.DateFormat = UTCGregorian;
+GMAT HSEYE8.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE8.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE8.DisplayStateType = Keplerian;
+GMAT HSEYE8.SMA = 6828.100000000004;
+GMAT HSEYE8.ECC = 1.475435552051932e-15;
+GMAT HSEYE8.INC = 49.99999999999998;
+GMAT HSEYE8.RAAN = 140;
+GMAT HSEYE8.AOP = 0;
+GMAT HSEYE8.TA = 75.00000000000001;
+GMAT HSEYE8.DryMass = 12;
+GMAT HSEYE8.Cd = 2.2;
+GMAT HSEYE8.Cr = 1;
+GMAT HSEYE8.DragArea = 0.03;
+GMAT HSEYE8.SRPArea = 0.06;
+GMAT HSEYE8.SPADDragScaleFactor = 1;
+GMAT HSEYE8.SPADSRPScaleFactor = 1;
+GMAT HSEYE8.NAIFId = -10002001;
+GMAT HSEYE8.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE8.OrbitColor = [0 128 255];
+GMAT HSEYE8.TargetColor = Teal;
+GMAT HSEYE8.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE8.CdSigma = 1e+70;
+GMAT HSEYE8.CrSigma = 1e+70;
+GMAT HSEYE8.Id = 'SatId';
+GMAT HSEYE8.Attitude = NadirPointing;
+GMAT HSEYE8.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE8.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE8.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE8.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE8.ModelFile = 'aura.3ds';
+GMAT HSEYE8.ModelOffsetX = 0;
+GMAT HSEYE8.ModelOffsetY = 0;
+GMAT HSEYE8.ModelOffsetZ = 0;
+GMAT HSEYE8.ModelRotationX = 0;
+GMAT HSEYE8.ModelRotationY = 0;
+GMAT HSEYE8.ModelRotationZ = 0;
+GMAT HSEYE8.ModelScale = 1;
+GMAT HSEYE8.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE8.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE8.EulerAngleSequence = '321';
+GMAT HSEYE8.AttitudeReferenceBody = Earth;
+GMAT HSEYE8.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE8.BodyAlignmentVectorX = 1;
+GMAT HSEYE8.BodyAlignmentVectorY = 1;
+GMAT HSEYE8.BodyAlignmentVectorZ = 0;
+GMAT HSEYE8.BodyConstraintVectorX = 0;
+GMAT HSEYE8.BodyConstraintVectorY = 0;
+GMAT HSEYE8.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE9;
+GMAT HSEYE9.DateFormat = UTCGregorian;
+GMAT HSEYE9.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE9.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE9.DisplayStateType = Keplerian;
+GMAT HSEYE9.SMA = 6828.100000000016;
+GMAT HSEYE9.ECC = 1.210205578621111e-15;
+GMAT HSEYE9.INC = 49.99999999999997;
+GMAT HSEYE9.RAAN = 160;
+GMAT HSEYE9.AOP = 0;
+GMAT HSEYE9.TA = 84.99999999999999;
+GMAT HSEYE9.DryMass = 12;
+GMAT HSEYE9.Cd = 2.2;
+GMAT HSEYE9.Cr = 1;
+GMAT HSEYE9.DragArea = 0.03;
+GMAT HSEYE9.SRPArea = 0.06;
+GMAT HSEYE9.SPADDragScaleFactor = 1;
+GMAT HSEYE9.SPADSRPScaleFactor = 1;
+GMAT HSEYE9.NAIFId = -10002001;
+GMAT HSEYE9.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE9.OrbitColor = [0 128 255];
+GMAT HSEYE9.TargetColor = Teal;
+GMAT HSEYE9.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE9.CdSigma = 1e+70;
+GMAT HSEYE9.CrSigma = 1e+70;
+GMAT HSEYE9.Id = 'SatId';
+GMAT HSEYE9.Attitude = NadirPointing;
+GMAT HSEYE9.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE9.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE9.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE9.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE9.ModelFile = 'aura.3ds';
+GMAT HSEYE9.ModelOffsetX = 0;
+GMAT HSEYE9.ModelOffsetY = 0;
+GMAT HSEYE9.ModelOffsetZ = 0;
+GMAT HSEYE9.ModelRotationX = 0;
+GMAT HSEYE9.ModelRotationY = 0;
+GMAT HSEYE9.ModelRotationZ = 0;
+GMAT HSEYE9.ModelScale = 1;
+GMAT HSEYE9.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE9.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE9.EulerAngleSequence = '321';
+GMAT HSEYE9.AttitudeReferenceBody = Earth;
+GMAT HSEYE9.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE9.BodyAlignmentVectorX = 1;
+GMAT HSEYE9.BodyAlignmentVectorY = 1;
+GMAT HSEYE9.BodyAlignmentVectorZ = 0;
+GMAT HSEYE9.BodyConstraintVectorX = 0;
+GMAT HSEYE9.BodyConstraintVectorY = 0;
+GMAT HSEYE9.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE10;
+GMAT HSEYE10.DateFormat = UTCGregorian;
+GMAT HSEYE10.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE10.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE10.DisplayStateType = Keplerian;
+GMAT HSEYE10.SMA = 6828.1;
+GMAT HSEYE10.ECC = 8.628631198662893e-16;
+GMAT HSEYE10.INC = 49.99999999999997;
+GMAT HSEYE10.RAAN = 180;
+GMAT HSEYE10.AOP = 0;
+GMAT HSEYE10.TA = 94.99999999999999;
+GMAT HSEYE10.DryMass = 12;
+GMAT HSEYE10.Cd = 2.2;
+GMAT HSEYE10.Cr = 1;
+GMAT HSEYE10.DragArea = 0.03;
+GMAT HSEYE10.SRPArea = 0.06;
+GMAT HSEYE10.SPADDragScaleFactor = 1;
+GMAT HSEYE10.SPADSRPScaleFactor = 1;
+GMAT HSEYE10.NAIFId = -10002001;
+GMAT HSEYE10.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE10.OrbitColor = [0 128 255];
+GMAT HSEYE10.TargetColor = Teal;
+GMAT HSEYE10.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE10.CdSigma = 1e+70;
+GMAT HSEYE10.CrSigma = 1e+70;
+GMAT HSEYE10.Id = 'SatId';
+GMAT HSEYE10.Attitude = NadirPointing;
+GMAT HSEYE10.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE10.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE10.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE10.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE10.ModelFile = 'aura.3ds';
+GMAT HSEYE10.ModelOffsetX = 0;
+GMAT HSEYE10.ModelOffsetY = 0;
+GMAT HSEYE10.ModelOffsetZ = 0;
+GMAT HSEYE10.ModelRotationX = 0;
+GMAT HSEYE10.ModelRotationY = 0;
+GMAT HSEYE10.ModelRotationZ = 0;
+GMAT HSEYE10.ModelScale = 1;
+GMAT HSEYE10.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE10.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE10.EulerAngleSequence = '321';
+GMAT HSEYE10.AttitudeReferenceBody = Earth;
+GMAT HSEYE10.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE10.BodyAlignmentVectorX = 1;
+GMAT HSEYE10.BodyAlignmentVectorY = 1;
+GMAT HSEYE10.BodyAlignmentVectorZ = 0;
+GMAT HSEYE10.BodyConstraintVectorX = 0;
+GMAT HSEYE10.BodyConstraintVectorY = 0;
+GMAT HSEYE10.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE11;
+GMAT HSEYE11.DateFormat = UTCGregorian;
+GMAT HSEYE11.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE11.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE11.DisplayStateType = Keplerian;
+GMAT HSEYE11.SMA = 6828.100000000004;
+GMAT HSEYE11.ECC = 8.380693190198433e-16;
+GMAT HSEYE11.INC = 49.99999999999999;
+GMAT HSEYE11.RAAN = 200;
+GMAT HSEYE11.AOP = 0;
+GMAT HSEYE11.TA = 105;
+GMAT HSEYE11.DryMass = 12;
+GMAT HSEYE11.Cd = 2.2;
+GMAT HSEYE11.Cr = 1;
+GMAT HSEYE11.DragArea = 0.03;
+GMAT HSEYE11.SRPArea = 0.06;
+GMAT HSEYE11.SPADDragScaleFactor = 1;
+GMAT HSEYE11.SPADSRPScaleFactor = 1;
+GMAT HSEYE11.NAIFId = -10002001;
+GMAT HSEYE11.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE11.OrbitColor = [0 128 255];
+GMAT HSEYE11.TargetColor = Teal;
+GMAT HSEYE11.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE11.CdSigma = 1e+70;
+GMAT HSEYE11.CrSigma = 1e+70;
+GMAT HSEYE11.Id = 'SatId';
+GMAT HSEYE11.Attitude = NadirPointing;
+GMAT HSEYE11.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE11.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE11.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE11.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE11.ModelFile = 'aura.3ds';
+GMAT HSEYE11.ModelOffsetX = 0;
+GMAT HSEYE11.ModelOffsetY = 0;
+GMAT HSEYE11.ModelOffsetZ = 0;
+GMAT HSEYE11.ModelRotationX = 0;
+GMAT HSEYE11.ModelRotationY = 0;
+GMAT HSEYE11.ModelRotationZ = 0;
+GMAT HSEYE11.ModelScale = 1;
+GMAT HSEYE11.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE11.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE11.EulerAngleSequence = '321';
+GMAT HSEYE11.AttitudeReferenceBody = Earth;
+GMAT HSEYE11.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE11.BodyAlignmentVectorX = 1;
+GMAT HSEYE11.BodyAlignmentVectorY = 1;
+GMAT HSEYE11.BodyAlignmentVectorZ = 0;
+GMAT HSEYE11.BodyConstraintVectorX = 0;
+GMAT HSEYE11.BodyConstraintVectorY = 0;
+GMAT HSEYE11.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE12;
+GMAT HSEYE12.DateFormat = UTCGregorian;
+GMAT HSEYE12.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE12.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE12.DisplayStateType = Keplerian;
+GMAT HSEYE12.SMA = 6828.099999999999;
+GMAT HSEYE12.ECC = 2.253031538576204e-15;
+GMAT HSEYE12.INC = 49.99999999999999;
+GMAT HSEYE12.RAAN = 220;
+GMAT HSEYE12.AOP = 0;
+GMAT HSEYE12.TA = 130;
+GMAT HSEYE12.DryMass = 12;
+GMAT HSEYE12.Cd = 2.2;
+GMAT HSEYE12.Cr = 1;
+GMAT HSEYE12.DragArea = 0.03;
+GMAT HSEYE12.SRPArea = 0.06;
+GMAT HSEYE12.SPADDragScaleFactor = 1;
+GMAT HSEYE12.SPADSRPScaleFactor = 1;
+GMAT HSEYE12.NAIFId = -10002001;
+GMAT HSEYE12.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE12.OrbitColor = [0 128 255];
+GMAT HSEYE12.TargetColor = Teal;
+GMAT HSEYE12.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE12.CdSigma = 1e+70;
+GMAT HSEYE12.CrSigma = 1e+70;
+GMAT HSEYE12.Id = 'SatId';
+GMAT HSEYE12.Attitude = NadirPointing;
+GMAT HSEYE12.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE12.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE12.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE12.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE12.ModelFile = 'aura.3ds';
+GMAT HSEYE12.ModelOffsetX = 0;
+GMAT HSEYE12.ModelOffsetY = 0;
+GMAT HSEYE12.ModelOffsetZ = 0;
+GMAT HSEYE12.ModelRotationX = 0;
+GMAT HSEYE12.ModelRotationY = 0;
+GMAT HSEYE12.ModelRotationZ = 0;
+GMAT HSEYE12.ModelScale = 1;
+GMAT HSEYE12.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE12.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE12.EulerAngleSequence = '321';
+GMAT HSEYE12.AttitudeReferenceBody = Earth;
+GMAT HSEYE12.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE12.BodyAlignmentVectorX = 1;
+GMAT HSEYE12.BodyAlignmentVectorY = 1;
+GMAT HSEYE12.BodyAlignmentVectorZ = 0;
+GMAT HSEYE12.BodyConstraintVectorX = 0;
+GMAT HSEYE12.BodyConstraintVectorY = 0;
+GMAT HSEYE12.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE13;
+GMAT HSEYE13.DateFormat = UTCGregorian;
+GMAT HSEYE13.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE13.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE13.DisplayStateType = Keplerian;
+GMAT HSEYE13.SMA = 6828.100000000007;
+GMAT HSEYE13.ECC = 1.977141656199937e-15;
+GMAT HSEYE13.INC = 50.00000000000001;
+GMAT HSEYE13.RAAN = 239.9999999999999;
+GMAT HSEYE13.AOP = 0;
+GMAT HSEYE13.TA = 140.0000000000001;
+GMAT HSEYE13.DryMass = 12;
+GMAT HSEYE13.Cd = 2.2;
+GMAT HSEYE13.Cr = 1;
+GMAT HSEYE13.DragArea = 0.03;
+GMAT HSEYE13.SRPArea = 0.06;
+GMAT HSEYE13.SPADDragScaleFactor = 1;
+GMAT HSEYE13.SPADSRPScaleFactor = 1;
+GMAT HSEYE13.NAIFId = -10002001;
+GMAT HSEYE13.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE13.OrbitColor = [128 255 128];
+GMAT HSEYE13.TargetColor = Teal;
+GMAT HSEYE13.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE13.CdSigma = 1e+70;
+GMAT HSEYE13.CrSigma = 1e+70;
+GMAT HSEYE13.Id = 'SatId';
+GMAT HSEYE13.Attitude = NadirPointing;
+GMAT HSEYE13.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE13.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE13.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE13.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE13.ModelFile = 'aura.3ds';
+GMAT HSEYE13.ModelOffsetX = 0;
+GMAT HSEYE13.ModelOffsetY = 0;
+GMAT HSEYE13.ModelOffsetZ = 0;
+GMAT HSEYE13.ModelRotationX = 0;
+GMAT HSEYE13.ModelRotationY = 0;
+GMAT HSEYE13.ModelRotationZ = 0;
+GMAT HSEYE13.ModelScale = 1;
+GMAT HSEYE13.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE13.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE13.EulerAngleSequence = '321';
+GMAT HSEYE13.AttitudeReferenceBody = Earth;
+GMAT HSEYE13.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE13.BodyAlignmentVectorX = 1;
+GMAT HSEYE13.BodyAlignmentVectorY = 1;
+GMAT HSEYE13.BodyAlignmentVectorZ = 0;
+GMAT HSEYE13.BodyConstraintVectorX = 0;
+GMAT HSEYE13.BodyConstraintVectorY = 0;
+GMAT HSEYE13.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE14;
+GMAT HSEYE14.DateFormat = UTCGregorian;
+GMAT HSEYE14.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE14.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE14.DisplayStateType = Keplerian;
+GMAT HSEYE14.SMA = 6828.100000000009;
+GMAT HSEYE14.ECC = 8.595319399327416e-16;
+GMAT HSEYE14.INC = 50;
+GMAT HSEYE14.RAAN = 260;
+GMAT HSEYE14.AOP = 0;
+GMAT HSEYE14.TA = 150;
+GMAT HSEYE14.DryMass = 12;
+GMAT HSEYE14.Cd = 2.2;
+GMAT HSEYE14.Cr = 1;
+GMAT HSEYE14.DragArea = 0.03;
+GMAT HSEYE14.SRPArea = 0.06;
+GMAT HSEYE14.SPADDragScaleFactor = 1;
+GMAT HSEYE14.SPADSRPScaleFactor = 1;
+GMAT HSEYE14.NAIFId = -10002001;
+GMAT HSEYE14.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE14.OrbitColor = [128 255 128];
+GMAT HSEYE14.TargetColor = Teal;
+GMAT HSEYE14.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE14.CdSigma = 1e+70;
+GMAT HSEYE14.CrSigma = 1e+70;
+GMAT HSEYE14.Id = 'SatId';
+GMAT HSEYE14.Attitude = NadirPointing;
+GMAT HSEYE14.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE14.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE14.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE14.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE14.ModelFile = 'aura.3ds';
+GMAT HSEYE14.ModelOffsetX = 0;
+GMAT HSEYE14.ModelOffsetY = 0;
+GMAT HSEYE14.ModelOffsetZ = 0;
+GMAT HSEYE14.ModelRotationX = 0;
+GMAT HSEYE14.ModelRotationY = 0;
+GMAT HSEYE14.ModelRotationZ = 0;
+GMAT HSEYE14.ModelScale = 1;
+GMAT HSEYE14.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE14.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE14.EulerAngleSequence = '321';
+GMAT HSEYE14.AttitudeReferenceBody = Earth;
+GMAT HSEYE14.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE14.BodyAlignmentVectorX = 1;
+GMAT HSEYE14.BodyAlignmentVectorY = 1;
+GMAT HSEYE14.BodyAlignmentVectorZ = 0;
+GMAT HSEYE14.BodyConstraintVectorX = 0;
+GMAT HSEYE14.BodyConstraintVectorY = 0;
+GMAT HSEYE14.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE15;
+GMAT HSEYE15.DateFormat = UTCGregorian;
+GMAT HSEYE15.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE15.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE15.DisplayStateType = Keplerian;
+GMAT HSEYE15.SMA = 6828.099999999999;
+GMAT HSEYE15.ECC = 1.828284342310229e-15;
+GMAT HSEYE15.INC = 49.99999999999999;
+GMAT HSEYE15.RAAN = 280;
+GMAT HSEYE15.AOP = 0;
+GMAT HSEYE15.TA = 160;
+GMAT HSEYE15.DryMass = 12;
+GMAT HSEYE15.Cd = 2.2;
+GMAT HSEYE15.Cr = 1;
+GMAT HSEYE15.DragArea = 0.03;
+GMAT HSEYE15.SRPArea = 0.06;
+GMAT HSEYE15.SPADDragScaleFactor = 1;
+GMAT HSEYE15.SPADSRPScaleFactor = 1;
+GMAT HSEYE15.NAIFId = -10002001;
+GMAT HSEYE15.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE15.OrbitColor = [128 255 128];
+GMAT HSEYE15.TargetColor = Teal;
+GMAT HSEYE15.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE15.CdSigma = 1e+70;
+GMAT HSEYE15.CrSigma = 1e+70;
+GMAT HSEYE15.Id = 'SatId';
+GMAT HSEYE15.Attitude = NadirPointing;
+GMAT HSEYE15.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE15.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE15.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE15.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE15.ModelFile = 'aura.3ds';
+GMAT HSEYE15.ModelOffsetX = 0;
+GMAT HSEYE15.ModelOffsetY = 0;
+GMAT HSEYE15.ModelOffsetZ = 0;
+GMAT HSEYE15.ModelRotationX = 0;
+GMAT HSEYE15.ModelRotationY = 0;
+GMAT HSEYE15.ModelRotationZ = 0;
+GMAT HSEYE15.ModelScale = 1;
+GMAT HSEYE15.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE15.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE15.EulerAngleSequence = '321';
+GMAT HSEYE15.AttitudeReferenceBody = Earth;
+GMAT HSEYE15.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE15.BodyAlignmentVectorX = 1;
+GMAT HSEYE15.BodyAlignmentVectorY = 1;
+GMAT HSEYE15.BodyAlignmentVectorZ = 0;
+GMAT HSEYE15.BodyConstraintVectorX = 0;
+GMAT HSEYE15.BodyConstraintVectorY = 0;
+GMAT HSEYE15.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE16;
+GMAT HSEYE16.DateFormat = UTCGregorian;
+GMAT HSEYE16.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE16.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE16.DisplayStateType = Keplerian;
+GMAT HSEYE16.SMA = 6828.100000000003;
+GMAT HSEYE16.ECC = 1.355135413020883e-15;
+GMAT HSEYE16.INC = 49.99999999999999;
+GMAT HSEYE16.RAAN = 299.9999999999999;
+GMAT HSEYE16.AOP = 0;
+GMAT HSEYE16.TA = 170;
+GMAT HSEYE16.DryMass = 12;
+GMAT HSEYE16.Cd = 2.2;
+GMAT HSEYE16.Cr = 1;
+GMAT HSEYE16.DragArea = 0.03;
+GMAT HSEYE16.SRPArea = 0.06;
+GMAT HSEYE16.SPADDragScaleFactor = 1;
+GMAT HSEYE16.SPADSRPScaleFactor = 1;
+GMAT HSEYE16.NAIFId = -10002001;
+GMAT HSEYE16.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE16.OrbitColor = [128 255 128];
+GMAT HSEYE16.TargetColor = Teal;
+GMAT HSEYE16.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE16.CdSigma = 1e+70;
+GMAT HSEYE16.CrSigma = 1e+70;
+GMAT HSEYE16.Id = 'SatId';
+GMAT HSEYE16.Attitude = NadirPointing;
+GMAT HSEYE16.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE16.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE16.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE16.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE16.ModelFile = 'aura.3ds';
+GMAT HSEYE16.ModelOffsetX = 0;
+GMAT HSEYE16.ModelOffsetY = 0;
+GMAT HSEYE16.ModelOffsetZ = 0;
+GMAT HSEYE16.ModelRotationX = 0;
+GMAT HSEYE16.ModelRotationY = 0;
+GMAT HSEYE16.ModelRotationZ = 0;
+GMAT HSEYE16.ModelScale = 1;
+GMAT HSEYE16.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE16.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE16.EulerAngleSequence = '321';
+GMAT HSEYE16.AttitudeReferenceBody = Earth;
+GMAT HSEYE16.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE16.BodyAlignmentVectorX = 1;
+GMAT HSEYE16.BodyAlignmentVectorY = 1;
+GMAT HSEYE16.BodyAlignmentVectorZ = 0;
+GMAT HSEYE16.BodyConstraintVectorX = 0;
+GMAT HSEYE16.BodyConstraintVectorY = 0;
+GMAT HSEYE16.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE17;
+GMAT HSEYE17.DateFormat = UTCGregorian;
+GMAT HSEYE17.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE17.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE17.DisplayStateType = Keplerian;
+GMAT HSEYE17.SMA = 6828.100000000008;
+GMAT HSEYE17.ECC = 8.520237496206978e-16;
+GMAT HSEYE17.INC = 50;
+GMAT HSEYE17.RAAN = 320;
+GMAT HSEYE17.AOP = 0;
+GMAT HSEYE17.TA = 180;
+GMAT HSEYE17.DryMass = 12;
+GMAT HSEYE17.Cd = 2.2;
+GMAT HSEYE17.Cr = 1;
+GMAT HSEYE17.DragArea = 0.03;
+GMAT HSEYE17.SRPArea = 0.06;
+GMAT HSEYE17.SPADDragScaleFactor = 1;
+GMAT HSEYE17.SPADSRPScaleFactor = 1;
+GMAT HSEYE17.NAIFId = -10002001;
+GMAT HSEYE17.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE17.OrbitColor = [128 255 128];
+GMAT HSEYE17.TargetColor = Teal;
+GMAT HSEYE17.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE17.CdSigma = 1e+70;
+GMAT HSEYE17.CrSigma = 1e+70;
+GMAT HSEYE17.Id = 'SatId';
+GMAT HSEYE17.Attitude = NadirPointing;
+GMAT HSEYE17.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE17.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE17.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE17.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE17.ModelFile = 'aura.3ds';
+GMAT HSEYE17.ModelOffsetX = 0;
+GMAT HSEYE17.ModelOffsetY = 0;
+GMAT HSEYE17.ModelOffsetZ = 0;
+GMAT HSEYE17.ModelRotationX = 0;
+GMAT HSEYE17.ModelRotationY = 0;
+GMAT HSEYE17.ModelRotationZ = 0;
+GMAT HSEYE17.ModelScale = 1;
+GMAT HSEYE17.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE17.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE17.EulerAngleSequence = '321';
+GMAT HSEYE17.AttitudeReferenceBody = Earth;
+GMAT HSEYE17.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE17.BodyAlignmentVectorX = 1;
+GMAT HSEYE17.BodyAlignmentVectorY = 1;
+GMAT HSEYE17.BodyAlignmentVectorZ = 0;
+GMAT HSEYE17.BodyConstraintVectorX = 0;
+GMAT HSEYE17.BodyConstraintVectorY = 0;
+GMAT HSEYE17.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft HSEYE18;
+GMAT HSEYE18.DateFormat = UTCGregorian;
+GMAT HSEYE18.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT HSEYE18.CoordinateSystem = EarthMJ2000Eq;
+GMAT HSEYE18.DisplayStateType = Keplerian;
+GMAT HSEYE18.SMA = 6828.099999999999;
+GMAT HSEYE18.ECC = 2.092853292970735e-15;
+GMAT HSEYE18.INC = 49.99999999999999;
+GMAT HSEYE18.RAAN = 340;
+GMAT HSEYE18.AOP = 0;
+GMAT HSEYE18.TA = 190.0000000000001;
+GMAT HSEYE18.DryMass = 12;
+GMAT HSEYE18.Cd = 2.2;
+GMAT HSEYE18.Cr = 1;
+GMAT HSEYE18.DragArea = 0.03;
+GMAT HSEYE18.SRPArea = 0.06;
+GMAT HSEYE18.SPADDragScaleFactor = 1;
+GMAT HSEYE18.SPADSRPScaleFactor = 1;
+GMAT HSEYE18.NAIFId = -10002001;
+GMAT HSEYE18.NAIFIdReferenceFrame = -9002001;
+GMAT HSEYE18.OrbitColor = [128 255 128];
+GMAT HSEYE18.TargetColor = Teal;
+GMAT HSEYE18.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT HSEYE18.CdSigma = 1e+70;
+GMAT HSEYE18.CrSigma = 1e+70;
+GMAT HSEYE18.Id = 'SatId';
+GMAT HSEYE18.Attitude = NadirPointing;
+GMAT HSEYE18.SPADSRPInterpolationMethod = Bilinear;
+GMAT HSEYE18.SPADSRPScaleFactorSigma = 1e+70;
+GMAT HSEYE18.SPADDragInterpolationMethod = Bilinear;
+GMAT HSEYE18.SPADDragScaleFactorSigma = 1e+70;
+GMAT HSEYE18.ModelFile = 'aura.3ds';
+GMAT HSEYE18.ModelOffsetX = 0;
+GMAT HSEYE18.ModelOffsetY = 0;
+GMAT HSEYE18.ModelOffsetZ = 0;
+GMAT HSEYE18.ModelRotationX = 0;
+GMAT HSEYE18.ModelRotationY = 0;
+GMAT HSEYE18.ModelRotationZ = 0;
+GMAT HSEYE18.ModelScale = 1;
+GMAT HSEYE18.AttitudeDisplayStateType = 'Quaternion';
+GMAT HSEYE18.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT HSEYE18.EulerAngleSequence = '321';
+GMAT HSEYE18.AttitudeReferenceBody = Earth;
+GMAT HSEYE18.AttitudeConstraintType = 'OrbitNormal';
+GMAT HSEYE18.BodyAlignmentVectorX = 1;
+GMAT HSEYE18.BodyAlignmentVectorY = 1;
+GMAT HSEYE18.BodyAlignmentVectorZ = 0;
+GMAT HSEYE18.BodyConstraintVectorX = 0;
+GMAT HSEYE18.BodyConstraintVectorY = 0;
+GMAT HSEYE18.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- Formation
+%----------------------------------------
+
+Create Formation constellation;
+GMAT constellation.Add = {HSEYE1, HSEYE2, HSEYE3, HSEYE4, HSEYE5, HSEYE6, HSEYE7, HSEYE8, HSEYE9, HSEYE10, HSEYE11, HSEYE12, HSEYE13, HSEYE14, HSEYE15, HSEYE16, HSEYE17, HSEYE18};
+
+%----------------------------------------
+%---------- GroundStations
+%----------------------------------------
+
+Create GroundStation Ireland;
+GMAT Ireland.OrbitColor = Thistle;
+GMAT Ireland.TargetColor = DarkGray;
+GMAT Ireland.CentralBody = Earth;
+GMAT Ireland.StateType = Spherical;
+GMAT Ireland.HorizonReference = Ellipsoid;
+GMAT Ireland.Location1 = 53;
+GMAT Ireland.Location2 = 353;
+GMAT Ireland.Location3 = 0.1;
+GMAT Ireland.Id = 'Ireland';
+GMAT Ireland.IonosphereModel = 'None';
+GMAT Ireland.TroposphereModel = 'None';
+GMAT Ireland.DataSource = 'Constant';
+GMAT Ireland.Temperature = 295.1;
+GMAT Ireland.Pressure = 1013.5;
+GMAT Ireland.Humidity = 55;
+GMAT Ireland.MinimumElevationAngle = 7;
+
+Create GroundStation Stockholm;
+GMAT Stockholm.OrbitColor = Thistle;
+GMAT Stockholm.TargetColor = DarkGray;
+GMAT Stockholm.CentralBody = Earth;
+GMAT Stockholm.StateType = Spherical;
+GMAT Stockholm.HorizonReference = Ellipsoid;
+GMAT Stockholm.Location1 = 59.32397300000001;
+GMAT Stockholm.Location2 = 18.065872;
+GMAT Stockholm.Location3 = 0.1;
+GMAT Stockholm.Id = 'Stockholm';
+GMAT Stockholm.IonosphereModel = 'None';
+GMAT Stockholm.TroposphereModel = 'None';
+GMAT Stockholm.DataSource = 'Constant';
+GMAT Stockholm.Temperature = 295.1;
+GMAT Stockholm.Pressure = 1013.5;
+GMAT Stockholm.Humidity = 55;
+GMAT Stockholm.MinimumElevationAngle = 7;
+
+Create GroundStation Bahrain;
+GMAT Bahrain.OrbitColor = Thistle;
+GMAT Bahrain.TargetColor = DarkGray;
+GMAT Bahrain.CentralBody = Earth;
+GMAT Bahrain.StateType = Spherical;
+GMAT Bahrain.HorizonReference = Ellipsoid;
+GMAT Bahrain.Location1 = 26.0667;
+GMAT Bahrain.Location2 = 50.557701;
+GMAT Bahrain.Location3 = 0.1;
+GMAT Bahrain.Id = 'Bahrain';
+GMAT Bahrain.IonosphereModel = 'None';
+GMAT Bahrain.TroposphereModel = 'None';
+GMAT Bahrain.DataSource = 'Constant';
+GMAT Bahrain.Temperature = 295.1;
+GMAT Bahrain.Pressure = 1013.5;
+GMAT Bahrain.Humidity = 55;
+GMAT Bahrain.MinimumElevationAngle = 7;
+
+Create GroundStation Cape_Town;
+GMAT Cape_Town.OrbitColor = Thistle;
+GMAT Cape_Town.TargetColor = DarkGray;
+GMAT Cape_Town.CentralBody = Earth;
+GMAT Cape_Town.StateType = Spherical;
+GMAT Cape_Town.HorizonReference = Ellipsoid;
+GMAT Cape_Town.Location1 = -33.92487;
+GMAT Cape_Town.Location2 = 18.424055;
+GMAT Cape_Town.Location3 = 0.1;
+GMAT Cape_Town.Id = 'Cape_Town';
+GMAT Cape_Town.IonosphereModel = 'None';
+GMAT Cape_Town.TroposphereModel = 'None';
+GMAT Cape_Town.DataSource = 'Constant';
+GMAT Cape_Town.Temperature = 295.1;
+GMAT Cape_Town.Pressure = 1013.5;
+GMAT Cape_Town.Humidity = 55;
+GMAT Cape_Town.MinimumElevationAngle = 7;
+
+Create GroundStation Seoul;
+GMAT Seoul.OrbitColor = Thistle;
+GMAT Seoul.TargetColor = DarkGray;
+GMAT Seoul.CentralBody = Earth;
+GMAT Seoul.StateType = Spherical;
+GMAT Seoul.HorizonReference = Ellipsoid;
+GMAT Seoul.Location1 = 37.566536;
+GMAT Seoul.Location2 = 126.977966;
+GMAT Seoul.Location3 = 0.1;
+GMAT Seoul.Id = 'Seoul';
+GMAT Seoul.IonosphereModel = 'None';
+GMAT Seoul.TroposphereModel = 'None';
+GMAT Seoul.DataSource = 'Constant';
+GMAT Seoul.Temperature = 295.1;
+GMAT Seoul.Pressure = 1013.5;
+GMAT Seoul.Humidity = 55;
+GMAT Seoul.MinimumElevationAngle = 7;
+
+Create GroundStation Sydney;
+GMAT Sydney.OrbitColor = Thistle;
+GMAT Sydney.TargetColor = DarkGray;
+GMAT Sydney.CentralBody = Earth;
+GMAT Sydney.StateType = Spherical;
+GMAT Sydney.HorizonReference = Ellipsoid;
+GMAT Sydney.Location1 = -33.86882;
+GMAT Sydney.Location2 = 151.20929;
+GMAT Sydney.Location3 = 0.1;
+GMAT Sydney.Id = 'Sydney';
+GMAT Sydney.IonosphereModel = 'None';
+GMAT Sydney.TroposphereModel = 'None';
+GMAT Sydney.DataSource = 'Constant';
+GMAT Sydney.Temperature = 295.1;
+GMAT Sydney.Pressure = 1013.5;
+GMAT Sydney.Humidity = 55;
+GMAT Sydney.MinimumElevationAngle = 7;
+
+Create GroundStation Hawaii;
+GMAT Hawaii.OrbitColor = Thistle;
+GMAT Hawaii.TargetColor = DarkGray;
+GMAT Hawaii.CentralBody = Earth;
+GMAT Hawaii.StateType = Spherical;
+GMAT Hawaii.HorizonReference = Ellipsoid;
+GMAT Hawaii.Location1 = 19.896767;
+GMAT Hawaii.Location2 = 204;
+GMAT Hawaii.Location3 = 0.1;
+GMAT Hawaii.Id = 'Hawaii';
+GMAT Hawaii.IonosphereModel = 'None';
+GMAT Hawaii.TroposphereModel = 'None';
+GMAT Hawaii.DataSource = 'Constant';
+GMAT Hawaii.Temperature = 295.1;
+GMAT Hawaii.Pressure = 1013.5;
+GMAT Hawaii.Humidity = 55;
+GMAT Hawaii.MinimumElevationAngle = 7;
+
+Create GroundStation Oregon;
+GMAT Oregon.OrbitColor = Thistle;
+GMAT Oregon.TargetColor = DarkGray;
+GMAT Oregon.CentralBody = Earth;
+GMAT Oregon.StateType = Spherical;
+GMAT Oregon.HorizonReference = Ellipsoid;
+GMAT Oregon.Location1 = 43.9792797;
+GMAT Oregon.Location2 = 239.9;
+GMAT Oregon.Location3 = 0.1;
+GMAT Oregon.Id = 'Oregon';
+GMAT Oregon.IonosphereModel = 'None';
+GMAT Oregon.TroposphereModel = 'None';
+GMAT Oregon.DataSource = 'Constant';
+GMAT Oregon.Temperature = 295.1;
+GMAT Oregon.Pressure = 1013.5;
+GMAT Oregon.Humidity = 55;
+GMAT Oregon.MinimumElevationAngle = 7;
+
+Create GroundStation Ohio;
+GMAT Ohio.OrbitColor = Thistle;
+GMAT Ohio.TargetColor = DarkGray;
+GMAT Ohio.CentralBody = Earth;
+GMAT Ohio.StateType = Spherical;
+GMAT Ohio.HorizonReference = Ellipsoid;
+GMAT Ohio.Location1 = 40.2253569;
+GMAT Ohio.Location2 = 277.32;
+GMAT Ohio.Location3 = 0.1;
+GMAT Ohio.Id = 'Ohio';
+GMAT Ohio.IonosphereModel = 'None';
+GMAT Ohio.TroposphereModel = 'None';
+GMAT Ohio.DataSource = 'Constant';
+GMAT Ohio.Temperature = 295.1;
+GMAT Ohio.Pressure = 1013.5;
+GMAT Ohio.Humidity = 55;
+GMAT Ohio.MinimumElevationAngle = 7;
+
+Create GroundStation Punta_Arenas;
+GMAT Punta_Arenas.OrbitColor = Thistle;
+GMAT Punta_Arenas.TargetColor = DarkGray;
+GMAT Punta_Arenas.CentralBody = Earth;
+GMAT Punta_Arenas.StateType = Spherical;
+GMAT Punta_Arenas.HorizonReference = Ellipsoid;
+GMAT Punta_Arenas.Location1 = -53.1625688;
+GMAT Punta_Arenas.Location2 = 289.1;
+GMAT Punta_Arenas.Location3 = 0.1;
+GMAT Punta_Arenas.Id = 'Punta_Arenas';
+GMAT Punta_Arenas.IonosphereModel = 'None';
+GMAT Punta_Arenas.TroposphereModel = 'None';
+GMAT Punta_Arenas.DataSource = 'Constant';
+GMAT Punta_Arenas.Temperature = 295.1;
+GMAT Punta_Arenas.Pressure = 1013.5;
+GMAT Punta_Arenas.Humidity = 55;
+GMAT Punta_Arenas.MinimumElevationAngle = 7;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel EarthPointProp_ForceModel;
+GMAT EarthPointProp_ForceModel.CentralBody = Earth;
+GMAT EarthPointProp_ForceModel.PrimaryBodies = {Earth};
+GMAT EarthPointProp_ForceModel.SRP = Off;
+GMAT EarthPointProp_ForceModel.RelativisticCorrection = Off;
+GMAT EarthPointProp_ForceModel.ErrorControl = RSSStep;
+GMAT EarthPointProp_ForceModel.GravityField.Earth.Degree = 4;
+GMAT EarthPointProp_ForceModel.GravityField.Earth.Order = 4;
+GMAT EarthPointProp_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT EarthPointProp_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT EarthPointProp_ForceModel.GravityField.Earth.TideModel = 'None';
+GMAT EarthPointProp_ForceModel.Drag.AtmosphereModel = JacchiaRoberts;
+GMAT EarthPointProp_ForceModel.Drag.HistoricWeatherSource = 'ConstantFluxAndGeoMag';
+GMAT EarthPointProp_ForceModel.Drag.PredictedWeatherSource = 'ConstantFluxAndGeoMag';
+GMAT EarthPointProp_ForceModel.Drag.CSSISpaceWeatherFile = 'SpaceWeather-All-v1.2.txt';
+GMAT EarthPointProp_ForceModel.Drag.SchattenFile = 'SchattenPredict.txt';
+GMAT EarthPointProp_ForceModel.Drag.F107 = 150;
+GMAT EarthPointProp_ForceModel.Drag.F107A = 150;
+GMAT EarthPointProp_ForceModel.Drag.MagneticIndex = 3;
+GMAT EarthPointProp_ForceModel.Drag.SchattenErrorModel = 'Nominal';
+GMAT EarthPointProp_ForceModel.Drag.SchattenTimingModel = 'NominalCycle';
+GMAT EarthPointProp_ForceModel.Drag.DragModel = 'Spherical';
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create Propagator EarthPointProp;
+GMAT EarthPointProp.FM = EarthPointProp_ForceModel;
+GMAT EarthPointProp.Type = RungeKutta89;
+GMAT EarthPointProp.InitialStepSize = 60;
+GMAT EarthPointProp.Accuracy = 9.999999999999999e-12;
+GMAT EarthPointProp.MinStep = 0.001;
+GMAT EarthPointProp.MaxStep = 2700;
+GMAT EarthPointProp.MaxStepAttempts = 50;
+GMAT EarthPointProp.StopIfAccuracyIsViolated = true;
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator1;
+GMAT EclipseLocator1.Spacecraft = HSEYE1;
+GMAT EclipseLocator1.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse1.txt';
+GMAT EclipseLocator1.OccultingBodies = {Earth};
+GMAT EclipseLocator1.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator1.InitialEpoch = '21545';
+GMAT EclipseLocator1.StepSize = 10;
+GMAT EclipseLocator1.FinalEpoch = '21545.138';
+GMAT EclipseLocator1.UseLightTimeDelay = true;
+GMAT EclipseLocator1.UseStellarAberration = true;
+GMAT EclipseLocator1.WriteReport = true;
+GMAT EclipseLocator1.RunMode = Automatic;
+GMAT EclipseLocator1.UseEntireInterval = true;
+GMAT EclipseLocator1.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator2;
+GMAT EclipseLocator2.Spacecraft = HSEYE2;
+GMAT EclipseLocator2.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse2.txt';
+GMAT EclipseLocator2.OccultingBodies = {Earth};
+GMAT EclipseLocator2.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator2.InitialEpoch = '21545';
+GMAT EclipseLocator2.StepSize = 10;
+GMAT EclipseLocator2.FinalEpoch = '21545.138';
+GMAT EclipseLocator2.UseLightTimeDelay = true;
+GMAT EclipseLocator2.UseStellarAberration = true;
+GMAT EclipseLocator2.WriteReport = true;
+GMAT EclipseLocator2.RunMode = Automatic;
+GMAT EclipseLocator2.UseEntireInterval = true;
+GMAT EclipseLocator2.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator3;
+GMAT EclipseLocator3.Spacecraft = HSEYE3;
+GMAT EclipseLocator3.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse3.txt';
+GMAT EclipseLocator3.OccultingBodies = {Earth};
+GMAT EclipseLocator3.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator3.InitialEpoch = '21545';
+GMAT EclipseLocator3.StepSize = 10;
+GMAT EclipseLocator3.FinalEpoch = '21545.138';
+GMAT EclipseLocator3.UseLightTimeDelay = true;
+GMAT EclipseLocator3.UseStellarAberration = true;
+GMAT EclipseLocator3.WriteReport = true;
+GMAT EclipseLocator3.RunMode = Automatic;
+GMAT EclipseLocator3.UseEntireInterval = true;
+GMAT EclipseLocator3.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator4;
+GMAT EclipseLocator4.Spacecraft = HSEYE4;
+GMAT EclipseLocator4.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse4.txt';
+GMAT EclipseLocator4.OccultingBodies = {Earth};
+GMAT EclipseLocator4.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator4.InitialEpoch = '21545';
+GMAT EclipseLocator4.StepSize = 10;
+GMAT EclipseLocator4.FinalEpoch = '21545.138';
+GMAT EclipseLocator4.UseLightTimeDelay = true;
+GMAT EclipseLocator4.UseStellarAberration = true;
+GMAT EclipseLocator4.WriteReport = true;
+GMAT EclipseLocator4.RunMode = Automatic;
+GMAT EclipseLocator4.UseEntireInterval = true;
+GMAT EclipseLocator4.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator5;
+GMAT EclipseLocator5.Spacecraft = HSEYE5;
+GMAT EclipseLocator5.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse5.txt';
+GMAT EclipseLocator5.OccultingBodies = {Earth};
+GMAT EclipseLocator5.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator5.InitialEpoch = '21545';
+GMAT EclipseLocator5.StepSize = 10;
+GMAT EclipseLocator5.FinalEpoch = '21545.138';
+GMAT EclipseLocator5.UseLightTimeDelay = true;
+GMAT EclipseLocator5.UseStellarAberration = true;
+GMAT EclipseLocator5.WriteReport = true;
+GMAT EclipseLocator5.RunMode = Automatic;
+GMAT EclipseLocator5.UseEntireInterval = true;
+GMAT EclipseLocator5.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator6;
+GMAT EclipseLocator6.Spacecraft = HSEYE6;
+GMAT EclipseLocator6.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse6.txt';
+GMAT EclipseLocator6.OccultingBodies = {Earth};
+GMAT EclipseLocator6.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator6.InitialEpoch = '21545';
+GMAT EclipseLocator6.StepSize = 10;
+GMAT EclipseLocator6.FinalEpoch = '21545.138';
+GMAT EclipseLocator6.UseLightTimeDelay = true;
+GMAT EclipseLocator6.UseStellarAberration = true;
+GMAT EclipseLocator6.WriteReport = true;
+GMAT EclipseLocator6.RunMode = Automatic;
+GMAT EclipseLocator6.UseEntireInterval = true;
+GMAT EclipseLocator6.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator7;
+GMAT EclipseLocator7.Spacecraft = HSEYE7;
+GMAT EclipseLocator7.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse7.txt';
+GMAT EclipseLocator7.OccultingBodies = {Earth};
+GMAT EclipseLocator7.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator7.InitialEpoch = '21545';
+GMAT EclipseLocator7.StepSize = 10;
+GMAT EclipseLocator7.FinalEpoch = '21545.138';
+GMAT EclipseLocator7.UseLightTimeDelay = true;
+GMAT EclipseLocator7.UseStellarAberration = true;
+GMAT EclipseLocator7.WriteReport = true;
+GMAT EclipseLocator7.RunMode = Automatic;
+GMAT EclipseLocator7.UseEntireInterval = true;
+GMAT EclipseLocator7.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator8;
+GMAT EclipseLocator8.Spacecraft = HSEYE8;
+GMAT EclipseLocator8.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse8.txt';
+GMAT EclipseLocator8.OccultingBodies = {Earth};
+GMAT EclipseLocator8.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator8.InitialEpoch = '21545';
+GMAT EclipseLocator8.StepSize = 10;
+GMAT EclipseLocator8.FinalEpoch = '21545.138';
+GMAT EclipseLocator8.UseLightTimeDelay = true;
+GMAT EclipseLocator8.UseStellarAberration = true;
+GMAT EclipseLocator8.WriteReport = true;
+GMAT EclipseLocator8.RunMode = Automatic;
+GMAT EclipseLocator8.UseEntireInterval = true;
+GMAT EclipseLocator8.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator9;
+GMAT EclipseLocator9.Spacecraft = HSEYE9;
+GMAT EclipseLocator9.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse9.txt';
+GMAT EclipseLocator9.OccultingBodies = {Earth};
+GMAT EclipseLocator9.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator9.InitialEpoch = '21545';
+GMAT EclipseLocator9.StepSize = 10;
+GMAT EclipseLocator9.FinalEpoch = '21545.138';
+GMAT EclipseLocator9.UseLightTimeDelay = true;
+GMAT EclipseLocator9.UseStellarAberration = true;
+GMAT EclipseLocator9.WriteReport = true;
+GMAT EclipseLocator9.RunMode = Automatic;
+GMAT EclipseLocator9.UseEntireInterval = true;
+GMAT EclipseLocator9.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator10;
+GMAT EclipseLocator10.Spacecraft = HSEYE10;
+GMAT EclipseLocator10.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse10.txt';
+GMAT EclipseLocator10.OccultingBodies = {Earth};
+GMAT EclipseLocator10.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator10.InitialEpoch = '21545';
+GMAT EclipseLocator10.StepSize = 10;
+GMAT EclipseLocator10.FinalEpoch = '21545.138';
+GMAT EclipseLocator10.UseLightTimeDelay = true;
+GMAT EclipseLocator10.UseStellarAberration = true;
+GMAT EclipseLocator10.WriteReport = true;
+GMAT EclipseLocator10.RunMode = Automatic;
+GMAT EclipseLocator10.UseEntireInterval = true;
+GMAT EclipseLocator10.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator11;
+GMAT EclipseLocator11.Spacecraft = HSEYE11;
+GMAT EclipseLocator11.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse11.txt';
+GMAT EclipseLocator11.OccultingBodies = {Earth};
+GMAT EclipseLocator11.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator11.InitialEpoch = '21545';
+GMAT EclipseLocator11.StepSize = 10;
+GMAT EclipseLocator11.FinalEpoch = '21545.138';
+GMAT EclipseLocator11.UseLightTimeDelay = true;
+GMAT EclipseLocator11.UseStellarAberration = true;
+GMAT EclipseLocator11.WriteReport = true;
+GMAT EclipseLocator11.RunMode = Automatic;
+GMAT EclipseLocator11.UseEntireInterval = true;
+GMAT EclipseLocator11.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator12;
+GMAT EclipseLocator12.Spacecraft = HSEYE12;
+GMAT EclipseLocator12.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse12.txt';
+GMAT EclipseLocator12.OccultingBodies = {Earth};
+GMAT EclipseLocator12.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator12.InitialEpoch = '21545';
+GMAT EclipseLocator12.StepSize = 10;
+GMAT EclipseLocator12.FinalEpoch = '21545.138';
+GMAT EclipseLocator12.UseLightTimeDelay = true;
+GMAT EclipseLocator12.UseStellarAberration = true;
+GMAT EclipseLocator12.WriteReport = true;
+GMAT EclipseLocator12.RunMode = Automatic;
+GMAT EclipseLocator12.UseEntireInterval = true;
+GMAT EclipseLocator12.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator13;
+GMAT EclipseLocator13.Spacecraft = HSEYE13;
+GMAT EclipseLocator13.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse13.txt';
+GMAT EclipseLocator13.OccultingBodies = {Earth};
+GMAT EclipseLocator13.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator13.InitialEpoch = '21545';
+GMAT EclipseLocator13.StepSize = 10;
+GMAT EclipseLocator13.FinalEpoch = '21545.138';
+GMAT EclipseLocator13.UseLightTimeDelay = true;
+GMAT EclipseLocator13.UseStellarAberration = true;
+GMAT EclipseLocator13.WriteReport = true;
+GMAT EclipseLocator13.RunMode = Automatic;
+GMAT EclipseLocator13.UseEntireInterval = true;
+GMAT EclipseLocator13.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator14;
+GMAT EclipseLocator14.Spacecraft = HSEYE14;
+GMAT EclipseLocator14.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse14.txt';
+GMAT EclipseLocator14.OccultingBodies = {Earth};
+GMAT EclipseLocator14.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator14.InitialEpoch = '21545';
+GMAT EclipseLocator14.StepSize = 10;
+GMAT EclipseLocator14.FinalEpoch = '21545.138';
+GMAT EclipseLocator14.UseLightTimeDelay = true;
+GMAT EclipseLocator14.UseStellarAberration = true;
+GMAT EclipseLocator14.WriteReport = true;
+GMAT EclipseLocator14.RunMode = Automatic;
+GMAT EclipseLocator14.UseEntireInterval = true;
+GMAT EclipseLocator14.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator15;
+GMAT EclipseLocator15.Spacecraft = HSEYE15;
+GMAT EclipseLocator15.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse15.txt';
+GMAT EclipseLocator15.OccultingBodies = {Earth};
+GMAT EclipseLocator15.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator15.InitialEpoch = '21545';
+GMAT EclipseLocator15.StepSize = 10;
+GMAT EclipseLocator15.FinalEpoch = '21545.138';
+GMAT EclipseLocator15.UseLightTimeDelay = true;
+GMAT EclipseLocator15.UseStellarAberration = true;
+GMAT EclipseLocator15.WriteReport = true;
+GMAT EclipseLocator15.RunMode = Automatic;
+GMAT EclipseLocator15.UseEntireInterval = true;
+GMAT EclipseLocator15.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator16;
+GMAT EclipseLocator16.Spacecraft = HSEYE16;
+GMAT EclipseLocator16.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse16.txt';
+GMAT EclipseLocator16.OccultingBodies = {Earth};
+GMAT EclipseLocator16.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator16.InitialEpoch = '21545';
+GMAT EclipseLocator16.StepSize = 10;
+GMAT EclipseLocator16.FinalEpoch = '21545.138';
+GMAT EclipseLocator16.UseLightTimeDelay = true;
+GMAT EclipseLocator16.UseStellarAberration = true;
+GMAT EclipseLocator16.WriteReport = true;
+GMAT EclipseLocator16.RunMode = Automatic;
+GMAT EclipseLocator16.UseEntireInterval = true;
+GMAT EclipseLocator16.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator17;
+GMAT EclipseLocator17.Spacecraft = HSEYE17;
+GMAT EclipseLocator17.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse17.txt';
+GMAT EclipseLocator17.OccultingBodies = {Earth};
+GMAT EclipseLocator17.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator17.InitialEpoch = '21545';
+GMAT EclipseLocator17.StepSize = 10;
+GMAT EclipseLocator17.FinalEpoch = '21545.138';
+GMAT EclipseLocator17.UseLightTimeDelay = true;
+GMAT EclipseLocator17.UseStellarAberration = true;
+GMAT EclipseLocator17.WriteReport = true;
+GMAT EclipseLocator17.RunMode = Automatic;
+GMAT EclipseLocator17.UseEntireInterval = true;
+GMAT EclipseLocator17.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- EventLocators
+%----------------------------------------
+
+Create EclipseLocator EclipseLocator18;
+GMAT EclipseLocator18.Spacecraft = HSEYE18;
+GMAT EclipseLocator18.Filename = 'Z:\University\Group project\GMAT\Constellation\eclipse18.txt';
+GMAT EclipseLocator18.OccultingBodies = {Earth};
+GMAT EclipseLocator18.InputEpochFormat = 'TAIModJulian';
+GMAT EclipseLocator18.InitialEpoch = '21545';
+GMAT EclipseLocator18.StepSize = 10;
+GMAT EclipseLocator18.FinalEpoch = '21545.138';
+GMAT EclipseLocator18.UseLightTimeDelay = true;
+GMAT EclipseLocator18.UseStellarAberration = true;
+GMAT EclipseLocator18.WriteReport = true;
+GMAT EclipseLocator18.RunMode = Automatic;
+GMAT EclipseLocator18.UseEntireInterval = true;
+GMAT EclipseLocator18.EclipseTypes = {'Umbra', 'Penumbra', 'Antumbra'};
+
+%----------------------------------------
+%---------- Solvers
+%----------------------------------------
+
+Create DifferentialCorrector DefaultDC;
+GMAT DefaultDC.ShowProgress = true;
+GMAT DefaultDC.ReportStyle = Normal;
+GMAT DefaultDC.ReportFile = 'DifferentialCorrectorDefaultDC.data';
+GMAT DefaultDC.MaximumIterations = 25;
+GMAT DefaultDC.DerivativeMethod = ForwardDifference;
+GMAT DefaultDC.Algorithm = NewtonRaphson;
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+Create OrbitView DefaultOrbitView;
+GMAT DefaultOrbitView.SolverIterations = Current;
+GMAT DefaultOrbitView.UpperLeft = [ 0.0009433962264150943 0 ];
+GMAT DefaultOrbitView.Size = [ 0.6971698113207547 0.8711340206185567 ];
+GMAT DefaultOrbitView.RelativeZOrder = 9;
+GMAT DefaultOrbitView.Maximized = false;
+GMAT DefaultOrbitView.Add = {HSEYE1, HSEYE2, HSEYE3, HSEYE4, HSEYE5, HSEYE6, HSEYE7, HSEYE8, HSEYE9, HSEYE10, HSEYE11, HSEYE12, HSEYE13, HSEYE14, HSEYE15, HSEYE16, HSEYE17, HSEYE18, Earth, Sun};
+GMAT DefaultOrbitView.CoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.DrawObject = [ true true true true true true true true true true true true true true true true true true true true ];
+GMAT DefaultOrbitView.DataCollectFrequency = 1;
+GMAT DefaultOrbitView.UpdatePlotFrequency = 50;
+GMAT DefaultOrbitView.NumPointsToRedraw = 0;
+GMAT DefaultOrbitView.ShowPlot = true;
+GMAT DefaultOrbitView.MaxPlotPoints = 1000;
+GMAT DefaultOrbitView.ShowLabels = true;
+GMAT DefaultOrbitView.ViewPointReference = Earth;
+GMAT DefaultOrbitView.ViewPointVector = [ 30000 0 0 ];
+GMAT DefaultOrbitView.ViewDirection = Earth;
+GMAT DefaultOrbitView.ViewScaleFactor = 1;
+GMAT DefaultOrbitView.ViewUpCoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.ViewUpAxis = Z;
+GMAT DefaultOrbitView.EclipticPlane = Off;
+GMAT DefaultOrbitView.XYPlane = Off;
+GMAT DefaultOrbitView.WireFrame = Off;
+GMAT DefaultOrbitView.Axes = On;
+GMAT DefaultOrbitView.Grid = Off;
+GMAT DefaultOrbitView.SunLine = On;
+GMAT DefaultOrbitView.UseInitialView = On;
+GMAT DefaultOrbitView.StarCount = 7000;
+GMAT DefaultOrbitView.EnableStars = On;
+GMAT DefaultOrbitView.EnableConstellations = On;
+
+Create GroundTrackPlot DefaultGroundTrackPlot;
+GMAT DefaultGroundTrackPlot.SolverIterations = Current;
+GMAT DefaultGroundTrackPlot.UpperLeft = [ 0.1047169811320755 0.07345360824742268 ];
+GMAT DefaultGroundTrackPlot.Size = [ 0.8433962264150944 0.8298969072164949 ];
+GMAT DefaultGroundTrackPlot.RelativeZOrder = 23;
+GMAT DefaultGroundTrackPlot.Maximized = false;
+GMAT DefaultGroundTrackPlot.Add = {Bahrain, Cape_Town, Hawaii, HSEYE1, HSEYE10, HSEYE11, HSEYE12, HSEYE13, HSEYE14, HSEYE15, HSEYE16, HSEYE17, HSEYE18, HSEYE2, HSEYE3, HSEYE4, HSEYE5, HSEYE6, HSEYE7, HSEYE8, HSEYE9, Ireland, Ohio, Oregon, Punta_Arenas, Seoul, Stockholm, Sydney};
+GMAT DefaultGroundTrackPlot.DataCollectFrequency = 1;
+GMAT DefaultGroundTrackPlot.UpdatePlotFrequency = 50;
+GMAT DefaultGroundTrackPlot.NumPointsToRedraw = 0;
+GMAT DefaultGroundTrackPlot.ShowPlot = true;
+GMAT DefaultGroundTrackPlot.MaxPlotPoints = 1000;
+GMAT DefaultGroundTrackPlot.CentralBody = Earth;
+GMAT DefaultGroundTrackPlot.TextureMap = 'ModifiedBlueMarble.jpg';
+
+Create XYPlot XYPlot2;
+GMAT XYPlot2.SolverIterations = Current;
+GMAT XYPlot2.UpperLeft = [ 0.5206286836935167 0.5249366018596788 ];
+GMAT XYPlot2.Size = [ 0.4690569744597249 0.4463229078613694 ];
+GMAT XYPlot2.RelativeZOrder = 208;
+GMAT XYPlot2.Maximized = false;
+GMAT XYPlot2.XVariable = HSEYE1.ElapsedDays;
+GMAT XYPlot2.YVariables = {HSEYE1.Earth.OrbitPeriod};
+GMAT XYPlot2.ShowGrid = false;
+GMAT XYPlot2.ShowPlot = false;
+
+Create XYPlot XYPlot3;
+GMAT XYPlot3.SolverIterations = Current;
+GMAT XYPlot3.UpperLeft = [ 0.514726507713885 0.01437024513947591 ];
+GMAT XYPlot3.Size = [ 0.3501636278634876 0.4497041420118343 ];
+GMAT XYPlot3.RelativeZOrder = 46;
+GMAT XYPlot3.Maximized = false;
+GMAT XYPlot3.XVariable = HSEYE1.ElapsedDays;
+GMAT XYPlot3.YVariables = {HSEYE1.EulerAngle1, HSEYE1.EulerAngle2, HSEYE1.EulerAngle3};
+GMAT XYPlot3.ShowGrid = false;
+GMAT XYPlot3.ShowPlot = false;
+
+Create XYPlot XYPlot1;
+GMAT XYPlot1.SolverIterations = Current;
+GMAT XYPlot1.UpperLeft = [ 0 0 ];
+GMAT XYPlot1.Size = [ 0 0 ];
+GMAT XYPlot1.RelativeZOrder = 0;
+GMAT XYPlot1.Maximized = false;
+GMAT XYPlot1.XVariable = HSEYE1.A1ModJulian;
+GMAT XYPlot1.YVariables = {HSEYE1.EarthMJ2000Eq.BVectorMag};
+GMAT XYPlot1.ShowGrid = false;
+GMAT XYPlot1.ShowPlot = false;
+
+
+%----------------------------------------
+%---------- Mission Sequence
+%----------------------------------------
+
+BeginMissionSequence;
+Propagate EarthPointProp(constellation) {HSEYE1.ElapsedDays = 180};

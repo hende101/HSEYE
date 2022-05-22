@@ -1,0 +1,387 @@
+%General Mission Analysis Tool(GMAT) Script
+%Created: 2022-04-27 20:07:47
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft ProtoCube;
+GMAT ProtoCube.DateFormat = UTCGregorian;
+GMAT ProtoCube.Epoch = '27 Apr 2022 11:59:28.000';
+GMAT ProtoCube.CoordinateSystem = EarthMJ2000Eq;
+GMAT ProtoCube.DisplayStateType = Keplerian;
+GMAT ProtoCube.SMA = 6828.10000000001;
+GMAT ProtoCube.ECC = 1.25436917400461e-15;
+GMAT ProtoCube.INC = 19.99999999999998;
+GMAT ProtoCube.RAAN = 360;
+GMAT ProtoCube.AOP = 0;
+GMAT ProtoCube.TA = 49.99999999999997;
+GMAT ProtoCube.DryMass = 12;
+GMAT ProtoCube.Cd = 1.6;
+GMAT ProtoCube.Cr = 1;
+GMAT ProtoCube.DragArea = 0.03;
+GMAT ProtoCube.SRPArea = 0.05;
+GMAT ProtoCube.SPADDragScaleFactor = 1;
+GMAT ProtoCube.SPADSRPScaleFactor = 1;
+GMAT ProtoCube.NAIFId = -10002001;
+GMAT ProtoCube.NAIFIdReferenceFrame = -9002001;
+GMAT ProtoCube.OrbitColor = Red;
+GMAT ProtoCube.TargetColor = Teal;
+GMAT ProtoCube.OrbitErrorCovariance = [ 1e+70 0 0 0 0 0 ; 0 1e+70 0 0 0 0 ; 0 0 1e+70 0 0 0 ; 0 0 0 1e+70 0 0 ; 0 0 0 0 1e+70 0 ; 0 0 0 0 0 1e+70 ];
+GMAT ProtoCube.CdSigma = 1e+70;
+GMAT ProtoCube.CrSigma = 1e+70;
+GMAT ProtoCube.Id = 'SatId';
+GMAT ProtoCube.Attitude = NadirPointing;
+GMAT ProtoCube.SPADSRPInterpolationMethod = Bilinear;
+GMAT ProtoCube.SPADSRPScaleFactorSigma = 1e+70;
+GMAT ProtoCube.SPADDragInterpolationMethod = Bilinear;
+GMAT ProtoCube.SPADDragScaleFactorSigma = 1e+70;
+GMAT ProtoCube.ModelFile = 'aura.3ds';
+GMAT ProtoCube.ModelOffsetX = 0;
+GMAT ProtoCube.ModelOffsetY = 0;
+GMAT ProtoCube.ModelOffsetZ = 0;
+GMAT ProtoCube.ModelRotationX = 0;
+GMAT ProtoCube.ModelRotationY = 0;
+GMAT ProtoCube.ModelRotationZ = 0;
+GMAT ProtoCube.ModelScale = 1;
+GMAT ProtoCube.AttitudeDisplayStateType = 'Quaternion';
+GMAT ProtoCube.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT ProtoCube.EulerAngleSequence = '321';
+GMAT ProtoCube.AttitudeReferenceBody = Earth;
+GMAT ProtoCube.AttitudeConstraintType = 'OrbitNormal';
+GMAT ProtoCube.BodyAlignmentVectorX = 1;
+GMAT ProtoCube.BodyAlignmentVectorY = 1;
+GMAT ProtoCube.BodyAlignmentVectorZ = 0;
+GMAT ProtoCube.BodyConstraintVectorX = 0;
+GMAT ProtoCube.BodyConstraintVectorY = 0;
+GMAT ProtoCube.BodyConstraintVectorZ = 1;
+
+%----------------------------------------
+%---------- GroundStations
+%----------------------------------------
+
+Create GroundStation Ireland;
+GMAT Ireland.OrbitColor = Thistle;
+GMAT Ireland.TargetColor = DarkGray;
+GMAT Ireland.CentralBody = Earth;
+GMAT Ireland.StateType = Spherical;
+GMAT Ireland.HorizonReference = Ellipsoid;
+GMAT Ireland.Location1 = 53;
+GMAT Ireland.Location2 = 353;
+GMAT Ireland.Location3 = 0.1;
+GMAT Ireland.Id = 'Ireland';
+GMAT Ireland.IonosphereModel = 'None';
+GMAT Ireland.TroposphereModel = 'None';
+GMAT Ireland.DataSource = 'Constant';
+GMAT Ireland.Temperature = 295.1;
+GMAT Ireland.Pressure = 1013.5;
+GMAT Ireland.Humidity = 55;
+GMAT Ireland.MinimumElevationAngle = 7;
+
+Create GroundStation Stockholm;
+GMAT Stockholm.OrbitColor = Thistle;
+GMAT Stockholm.TargetColor = DarkGray;
+GMAT Stockholm.CentralBody = Earth;
+GMAT Stockholm.StateType = Spherical;
+GMAT Stockholm.HorizonReference = Ellipsoid;
+GMAT Stockholm.Location1 = 59.32397300000001;
+GMAT Stockholm.Location2 = 18.065872;
+GMAT Stockholm.Location3 = 0.1;
+GMAT Stockholm.Id = 'Stockholm';
+GMAT Stockholm.IonosphereModel = 'None';
+GMAT Stockholm.TroposphereModel = 'None';
+GMAT Stockholm.DataSource = 'Constant';
+GMAT Stockholm.Temperature = 295.1;
+GMAT Stockholm.Pressure = 1013.5;
+GMAT Stockholm.Humidity = 55;
+GMAT Stockholm.MinimumElevationAngle = 7;
+
+Create GroundStation Bahrain;
+GMAT Bahrain.OrbitColor = Thistle;
+GMAT Bahrain.TargetColor = DarkGray;
+GMAT Bahrain.CentralBody = Earth;
+GMAT Bahrain.StateType = Spherical;
+GMAT Bahrain.HorizonReference = Ellipsoid;
+GMAT Bahrain.Location1 = 26.0667;
+GMAT Bahrain.Location2 = 50.557701;
+GMAT Bahrain.Location3 = 0.1;
+GMAT Bahrain.Id = 'Bahrain';
+GMAT Bahrain.IonosphereModel = 'None';
+GMAT Bahrain.TroposphereModel = 'None';
+GMAT Bahrain.DataSource = 'Constant';
+GMAT Bahrain.Temperature = 295.1;
+GMAT Bahrain.Pressure = 1013.5;
+GMAT Bahrain.Humidity = 55;
+GMAT Bahrain.MinimumElevationAngle = 7;
+
+Create GroundStation Cape_Town;
+GMAT Cape_Town.OrbitColor = Thistle;
+GMAT Cape_Town.TargetColor = DarkGray;
+GMAT Cape_Town.CentralBody = Earth;
+GMAT Cape_Town.StateType = Spherical;
+GMAT Cape_Town.HorizonReference = Ellipsoid;
+GMAT Cape_Town.Location1 = -33.92487;
+GMAT Cape_Town.Location2 = 18.424055;
+GMAT Cape_Town.Location3 = 0.1;
+GMAT Cape_Town.Id = 'Cape_Town';
+GMAT Cape_Town.IonosphereModel = 'None';
+GMAT Cape_Town.TroposphereModel = 'None';
+GMAT Cape_Town.DataSource = 'Constant';
+GMAT Cape_Town.Temperature = 295.1;
+GMAT Cape_Town.Pressure = 1013.5;
+GMAT Cape_Town.Humidity = 55;
+GMAT Cape_Town.MinimumElevationAngle = 7;
+
+Create GroundStation Seoul;
+GMAT Seoul.OrbitColor = Thistle;
+GMAT Seoul.TargetColor = DarkGray;
+GMAT Seoul.CentralBody = Earth;
+GMAT Seoul.StateType = Spherical;
+GMAT Seoul.HorizonReference = Ellipsoid;
+GMAT Seoul.Location1 = 37.566536;
+GMAT Seoul.Location2 = 126.977966;
+GMAT Seoul.Location3 = 0.1;
+GMAT Seoul.Id = 'Seoul';
+GMAT Seoul.IonosphereModel = 'None';
+GMAT Seoul.TroposphereModel = 'None';
+GMAT Seoul.DataSource = 'Constant';
+GMAT Seoul.Temperature = 295.1;
+GMAT Seoul.Pressure = 1013.5;
+GMAT Seoul.Humidity = 55;
+GMAT Seoul.MinimumElevationAngle = 7;
+
+Create GroundStation Sydney;
+GMAT Sydney.OrbitColor = Thistle;
+GMAT Sydney.TargetColor = DarkGray;
+GMAT Sydney.CentralBody = Earth;
+GMAT Sydney.StateType = Spherical;
+GMAT Sydney.HorizonReference = Ellipsoid;
+GMAT Sydney.Location1 = -33.86882;
+GMAT Sydney.Location2 = 151.20929;
+GMAT Sydney.Location3 = 0.1;
+GMAT Sydney.Id = 'Sydney';
+GMAT Sydney.IonosphereModel = 'None';
+GMAT Sydney.TroposphereModel = 'None';
+GMAT Sydney.DataSource = 'Constant';
+GMAT Sydney.Temperature = 295.1;
+GMAT Sydney.Pressure = 1013.5;
+GMAT Sydney.Humidity = 55;
+GMAT Sydney.MinimumElevationAngle = 7;
+
+Create GroundStation Hawaii;
+GMAT Hawaii.OrbitColor = Thistle;
+GMAT Hawaii.TargetColor = DarkGray;
+GMAT Hawaii.CentralBody = Earth;
+GMAT Hawaii.StateType = Spherical;
+GMAT Hawaii.HorizonReference = Ellipsoid;
+GMAT Hawaii.Location1 = 19.896767;
+GMAT Hawaii.Location2 = 204;
+GMAT Hawaii.Location3 = 0.1;
+GMAT Hawaii.Id = 'Hawaii';
+GMAT Hawaii.IonosphereModel = 'None';
+GMAT Hawaii.TroposphereModel = 'None';
+GMAT Hawaii.DataSource = 'Constant';
+GMAT Hawaii.Temperature = 295.1;
+GMAT Hawaii.Pressure = 1013.5;
+GMAT Hawaii.Humidity = 55;
+GMAT Hawaii.MinimumElevationAngle = 7;
+
+Create GroundStation Oregon;
+GMAT Oregon.OrbitColor = Thistle;
+GMAT Oregon.TargetColor = DarkGray;
+GMAT Oregon.CentralBody = Earth;
+GMAT Oregon.StateType = Spherical;
+GMAT Oregon.HorizonReference = Ellipsoid;
+GMAT Oregon.Location1 = 43.9792797;
+GMAT Oregon.Location2 = 239.9;
+GMAT Oregon.Location3 = 0.1;
+GMAT Oregon.Id = 'Oregon';
+GMAT Oregon.IonosphereModel = 'None';
+GMAT Oregon.TroposphereModel = 'None';
+GMAT Oregon.DataSource = 'Constant';
+GMAT Oregon.Temperature = 295.1;
+GMAT Oregon.Pressure = 1013.5;
+GMAT Oregon.Humidity = 55;
+GMAT Oregon.MinimumElevationAngle = 7;
+
+Create GroundStation Ohio;
+GMAT Ohio.OrbitColor = Thistle;
+GMAT Ohio.TargetColor = DarkGray;
+GMAT Ohio.CentralBody = Earth;
+GMAT Ohio.StateType = Spherical;
+GMAT Ohio.HorizonReference = Ellipsoid;
+GMAT Ohio.Location1 = 40.2253569;
+GMAT Ohio.Location2 = 277.32;
+GMAT Ohio.Location3 = 0.1;
+GMAT Ohio.Id = 'Ohio';
+GMAT Ohio.IonosphereModel = 'None';
+GMAT Ohio.TroposphereModel = 'None';
+GMAT Ohio.DataSource = 'Constant';
+GMAT Ohio.Temperature = 295.1;
+GMAT Ohio.Pressure = 1013.5;
+GMAT Ohio.Humidity = 55;
+GMAT Ohio.MinimumElevationAngle = 7;
+
+Create GroundStation Punta_Arenas;
+GMAT Punta_Arenas.OrbitColor = Thistle;
+GMAT Punta_Arenas.TargetColor = DarkGray;
+GMAT Punta_Arenas.CentralBody = Earth;
+GMAT Punta_Arenas.StateType = Spherical;
+GMAT Punta_Arenas.HorizonReference = Ellipsoid;
+GMAT Punta_Arenas.Location1 = -53.1625688;
+GMAT Punta_Arenas.Location2 = 289.1;
+GMAT Punta_Arenas.Location3 = 0.1;
+GMAT Punta_Arenas.Id = 'Punta_Arenas';
+GMAT Punta_Arenas.IonosphereModel = 'None';
+GMAT Punta_Arenas.TroposphereModel = 'None';
+GMAT Punta_Arenas.DataSource = 'Constant';
+GMAT Punta_Arenas.Temperature = 295.1;
+GMAT Punta_Arenas.Pressure = 1013.5;
+GMAT Punta_Arenas.Humidity = 55;
+GMAT Punta_Arenas.MinimumElevationAngle = 7;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel EarthPointProp_ForceModel;
+GMAT EarthPointProp_ForceModel.CentralBody = Earth;
+GMAT EarthPointProp_ForceModel.PrimaryBodies = {Earth};
+GMAT EarthPointProp_ForceModel.SRP = On;
+GMAT EarthPointProp_ForceModel.RelativisticCorrection = On;
+GMAT EarthPointProp_ForceModel.ErrorControl = RSSStep;
+GMAT EarthPointProp_ForceModel.GravityField.Earth.Degree = 4;
+GMAT EarthPointProp_ForceModel.GravityField.Earth.Order = 4;
+GMAT EarthPointProp_ForceModel.GravityField.Earth.StmLimit = 100;
+GMAT EarthPointProp_ForceModel.GravityField.Earth.PotentialFile = 'JGM2.cof';
+GMAT EarthPointProp_ForceModel.GravityField.Earth.TideModel = 'None';
+GMAT EarthPointProp_ForceModel.SRP.Flux = 1367;
+GMAT EarthPointProp_ForceModel.SRP.SRPModel = Spherical;
+GMAT EarthPointProp_ForceModel.SRP.Nominal_Sun = 149597870.691;
+GMAT EarthPointProp_ForceModel.Drag.AtmosphereModel = JacchiaRoberts;
+GMAT EarthPointProp_ForceModel.Drag.HistoricWeatherSource = 'ConstantFluxAndGeoMag';
+GMAT EarthPointProp_ForceModel.Drag.PredictedWeatherSource = 'ConstantFluxAndGeoMag';
+GMAT EarthPointProp_ForceModel.Drag.CSSISpaceWeatherFile = 'SpaceWeather-All-v1.2.txt';
+GMAT EarthPointProp_ForceModel.Drag.SchattenFile = 'SchattenPredict.txt';
+GMAT EarthPointProp_ForceModel.Drag.F107 = 150;
+GMAT EarthPointProp_ForceModel.Drag.F107A = 150;
+GMAT EarthPointProp_ForceModel.Drag.MagneticIndex = 3;
+GMAT EarthPointProp_ForceModel.Drag.SchattenErrorModel = 'Nominal';
+GMAT EarthPointProp_ForceModel.Drag.SchattenTimingModel = 'NominalCycle';
+GMAT EarthPointProp_ForceModel.Drag.DragModel = 'Spherical';
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create Propagator EarthPointProp;
+GMAT EarthPointProp.FM = EarthPointProp_ForceModel;
+GMAT EarthPointProp.Type = RungeKutta89;
+GMAT EarthPointProp.InitialStepSize = 100;
+GMAT EarthPointProp.Accuracy = 9.999999999999999e-12;
+GMAT EarthPointProp.MinStep = 100;
+GMAT EarthPointProp.MaxStep = 2600;
+GMAT EarthPointProp.MaxStepAttempts = 50;
+GMAT EarthPointProp.StopIfAccuracyIsViolated = false;
+
+%----------------------------------------
+%---------- Solvers
+%----------------------------------------
+
+Create DifferentialCorrector DefaultDC;
+GMAT DefaultDC.ShowProgress = true;
+GMAT DefaultDC.ReportStyle = Normal;
+GMAT DefaultDC.ReportFile = 'DifferentialCorrectorDefaultDC.data';
+GMAT DefaultDC.MaximumIterations = 25;
+GMAT DefaultDC.DerivativeMethod = ForwardDifference;
+GMAT DefaultDC.Algorithm = NewtonRaphson;
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+Create OrbitView DefaultOrbitView;
+GMAT DefaultOrbitView.SolverIterations = Current;
+GMAT DefaultOrbitView.UpperLeft = [ 0.002352941176470588 0 ];
+GMAT DefaultOrbitView.Size = [ 0.1935294117647059 0.5192307692307693 ];
+GMAT DefaultOrbitView.RelativeZOrder = 241;
+GMAT DefaultOrbitView.Maximized = false;
+GMAT DefaultOrbitView.Add = {ProtoCube, Earth};
+GMAT DefaultOrbitView.CoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.DrawObject = [ true true ];
+GMAT DefaultOrbitView.DataCollectFrequency = 1;
+GMAT DefaultOrbitView.UpdatePlotFrequency = 50;
+GMAT DefaultOrbitView.NumPointsToRedraw = 0;
+GMAT DefaultOrbitView.ShowPlot = true;
+GMAT DefaultOrbitView.MaxPlotPoints = 1000;
+GMAT DefaultOrbitView.ShowLabels = true;
+GMAT DefaultOrbitView.ViewPointReference = Earth;
+GMAT DefaultOrbitView.ViewPointVector = [ 30000 0 0 ];
+GMAT DefaultOrbitView.ViewDirection = Earth;
+GMAT DefaultOrbitView.ViewScaleFactor = 1;
+GMAT DefaultOrbitView.ViewUpCoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.ViewUpAxis = Z;
+GMAT DefaultOrbitView.EclipticPlane = Off;
+GMAT DefaultOrbitView.XYPlane = Off;
+GMAT DefaultOrbitView.WireFrame = Off;
+GMAT DefaultOrbitView.Axes = On;
+GMAT DefaultOrbitView.Grid = Off;
+GMAT DefaultOrbitView.SunLine = Off;
+GMAT DefaultOrbitView.UseInitialView = On;
+GMAT DefaultOrbitView.StarCount = 7000;
+GMAT DefaultOrbitView.EnableStars = On;
+GMAT DefaultOrbitView.EnableConstellations = On;
+
+Create GroundTrackPlot DefaultGroundTrackPlot;
+GMAT DefaultGroundTrackPlot.SolverIterations = Current;
+GMAT DefaultGroundTrackPlot.UpperLeft = [ 0 0.5072115384615384 ];
+GMAT DefaultGroundTrackPlot.Size = [ 0.1952941176470588 0.4699519230769231 ];
+GMAT DefaultGroundTrackPlot.RelativeZOrder = 13;
+GMAT DefaultGroundTrackPlot.Maximized = false;
+GMAT DefaultGroundTrackPlot.Add = {Bahrain, Cape_Town, Hawaii, Ireland, Ohio, Oregon, ProtoCube, Punta_Arenas, Seoul, Stockholm, Sydney};
+GMAT DefaultGroundTrackPlot.DataCollectFrequency = 1;
+GMAT DefaultGroundTrackPlot.UpdatePlotFrequency = 50;
+GMAT DefaultGroundTrackPlot.NumPointsToRedraw = 0;
+GMAT DefaultGroundTrackPlot.ShowPlot = true;
+GMAT DefaultGroundTrackPlot.MaxPlotPoints = 1000;
+GMAT DefaultGroundTrackPlot.CentralBody = Earth;
+GMAT DefaultGroundTrackPlot.TextureMap = 'ModifiedBlueMarble.jpg';
+
+Create ReportFile ReportFile1;
+GMAT ReportFile1.SolverIterations = Current;
+GMAT ReportFile1.UpperLeft = [ 0 0 ];
+GMAT ReportFile1.Size = [ 0 0 ];
+GMAT ReportFile1.RelativeZOrder = 0;
+GMAT ReportFile1.Maximized = false;
+GMAT ReportFile1.Filename = 'C:\Users\william\Downloads\test.txt';
+GMAT ReportFile1.Precision = 6;
+GMAT ReportFile1.Add = {ProtoCube.Earth.Altitude, ProtoCube.ElapsedDays};
+GMAT ReportFile1.WriteHeaders = true;
+GMAT ReportFile1.LeftJustify = On;
+GMAT ReportFile1.ZeroFill = Off;
+GMAT ReportFile1.FixedWidth = true;
+GMAT ReportFile1.Delimiter = ' ';
+GMAT ReportFile1.ColumnWidth = 23;
+GMAT ReportFile1.WriteReport = true;
+
+
+%----------------------------------------
+%---------- Mission Sequence
+%----------------------------------------
+
+BeginMissionSequence;
+Propagate EarthPointProp(ProtoCube) {ProtoCube.ElapsedDays = 1500};
